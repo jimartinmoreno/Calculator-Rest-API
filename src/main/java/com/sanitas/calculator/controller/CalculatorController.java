@@ -22,13 +22,13 @@ public class CalculatorController {
     }
 
     @PostMapping(path = "sum")
-    @ResponseStatus(HttpStatus.OK)
+    //@ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Response> sum(@RequestBody @Valid Request request){
         return new ResponseEntity<>(new Response(calculatorService.sum(request)), HttpStatus.OK);
     }
 
     @PostMapping(path = "subtraction")
-    @ResponseStatus(HttpStatus.OK)
+    //@ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Response> subtraction(@RequestBody @Valid Request request){
         return new ResponseEntity<>(new Response(calculatorService.subtraction(request)), HttpStatus.OK);
     }
