@@ -1,18 +1,12 @@
 package com.sanitas.calculator.domain;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Response {
-    @Getter
-    private final int solution;
-
-    @JsonCreator
-    public Response(@JsonProperty int solution) {
-        this.solution = solution;
-    }
-
-
+    private int solution;
 }
