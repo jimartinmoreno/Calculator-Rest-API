@@ -32,4 +32,14 @@ public class CalculatorController {
     public ResponseEntity<Response> subtraction(@RequestBody @Valid Request request){
         return new ResponseEntity<>(new Response(calculatorService.subtraction(request)), HttpStatus.OK);
     }
+
+    @PostMapping(path = "sum2")
+    public ResponseEntity<Response> sum2(@RequestBody @Valid Request request){
+        return new ResponseEntity<>(calculatorService.sum2(request), HttpStatus.OK);
+    }
+
+    @PostMapping(path = "subtraction2")
+    public ResponseEntity<Response> subtraction2(@RequestBody @Valid Request request){
+        return new ResponseEntity<>(calculatorService.subtraction2(request), HttpStatus.OK);
+    }
 }

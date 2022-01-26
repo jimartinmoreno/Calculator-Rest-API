@@ -26,4 +26,16 @@ class CalculatorServiceMockTest {
         int result = calculatorService.subtraction(new Request(1, 1));
         assertThat(result).isZero();
     }
+
+    @Test
+    void sum2() {
+        int result = calculatorService.sum2(new Request(1, 1)).getSolution();
+        assertThat(result).isEqualTo(2);
+    }
+
+    @Test
+    void subtraction2() {
+        int result = calculatorService.subtraction2(new Request(1, 1)).getSolution();
+        assertThat(result).isZero();
+    }
 }
